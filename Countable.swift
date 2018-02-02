@@ -10,6 +10,8 @@ import UIKit
 
 public protocol Countable {
     static func count() -> Int
+    static func allCases() -> [Countable]
+    func stringValue() -> String
 }
 
 extension Countable where Self:RawRepresentable, Self.RawValue == Int {
